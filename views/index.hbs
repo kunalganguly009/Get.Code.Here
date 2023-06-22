@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+      
+        section {
+            height: 100vh;
+            width: 100%;
+        }
+
+        /*.partialnav{
+           position: relative;
+       }
+       .partialhome{
+           position:absolute;
+       }*/
+        .partialnav {
+            height: 0vh;
+            width: 100%;
+        }
+
+        .partialhome {
+            height: 100vh;
+            width: 100%;
+        }
+
+        .footer {
+            height: 75vh;
+            width: 100%;
+        }
+
+        .bgcolorindex {
+            background: linear-gradient(0deg, black, white);
+        }
+
+      
+
+    </style>
+</head>
+
+<body>
+
+    <div class="indexCTNR">
+
+        <div class="partialnav">
+            {{>nav}}
+        </div>
+  
+        <section class="partialhome">
+
+            {{>home}}
+        </section>
+
+        <div class="bgcolorindex">
+
+        <section>
+
+            {{>design}}
+        </section>
+        <div class="footer">
+
+            {{>getintouch}}
+        </div>
+
+    </div>
+        </div>
+</body>
+
+</html>

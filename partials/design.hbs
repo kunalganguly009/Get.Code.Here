@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="styles/main.css" /> -->
+    <title>Document</title>
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.carousel_ctnr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.carousel {
+  margin-top: auto;
+  perspective: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  /*background: linear-gradient(0deg, black, white);*/
+  background: transparent;
+  height: 100vh;
+}
+.carousel > * {
+  flex: 0 0 auto;
+}
+.carousel figure {
+  margin: 0;
+  width: 400px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform-origin: 50% 50% -482.8427124746px;
+}
+.carousel figure .image {
+  width: 400px;
+  height: 300px;
+  box-sizing: border-box;
+  padding: 0 40px;
+  opacity: 0.9;
+}
+.carousel figure .image:not(:first-of-type) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 50% 50% -482.8427124746px;
+}
+.carousel figure .image:nth-child(2) {
+  transform: rotateY(0.7853981634rad);
+}
+.carousel figure .image:nth-child(3) {
+  transform: rotateY(1.5707963268rad);
+}
+.carousel figure .image:nth-child(4) {
+  transform: rotateY(2.3561944902rad);
+}
+.carousel figure .image:nth-child(5) {
+  transform: rotateY(3.1415926536rad);
+}
+.carousel figure .image:nth-child(6) {
+  transform: rotateY(3.926990817rad);
+}
+.carousel figure .image:nth-child(7) {
+  transform: rotateY(4.7123889804rad);
+}
+.carousel figure .image:nth-child(8) {
+  transform: rotateY(5.4977871438rad);
+}
+.carousel .main_nav {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0;
+}
+.carousel .main_nav .nav {
+  flex: 0 0 auto;
+  margin: 20px 9px;
+  cursor: pointer;
+  color: #333;
+  background: none;
+  border: 1px solid;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+}
+
+.image {
+  perspective: 500px;
+}
+
+.flipbox {
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: 0.5s all;
+}
+
+.image:hover .flipbox {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+  color: black;
+  position: absolute;
+  font-size: 30px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.front .front_btn {
+  display: none;
+}
+
+.front h1 {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 400;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.front_btn, .back_btn {
+  position: relative;
+  height: 45px;
+  width: 150px;
+  margin: 10px 7px;
+  padding: 5px 5px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: white;
+  border: 2px solid black;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.08s ease-in;
+  -o-transition: 0.08s ease-in;
+  -ms-transition: 0.08s ease-in;
+  -moz-transition: 0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+}
+
+.front_btn, .back_btn {
+  color: black;
+}
+
+.login_btn_txt_clr {
+  color: white;
+  border: 2px solid white;
+}
+
+.contact_btn_txt_clr {
+  color: white;
+  border: 2px solid white;
+}
+
+.front_btn::before, .back_btn::before {
+  content: "";
+  position: absolute;
+  background: white;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  transition: top 0.09s ease-in;
+}
+
+.front_btn:hover:before, .back_btn:hover:before {
+  top: 0;
+}
+
+.contact_btn_txt_clr::before, .login_btn_txt_clr::before {
+  content: "";
+  position: absolute;
+  background: black;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  transition: top 0.09s ease-in;
+}
+
+.home_bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("homePageImg.jpg");
+}
+
+.about_bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("about us.jpg");
+}
+
+.contact_bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("contact us.jpg");
+}
+
+.services_bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("services.jpg");
+}
+
+.login_bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("loginSignup.jpg");
+}
+
+.feedback_bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("feedback.jpg");
+}
+
+.portfolio_bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("portfolio.jpg");
+}
+
+.error_bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("404error.jpg");
+}
+
+/*.carousel_ctnr::before {
+    content: '';
+    position: absolute;
+    bottom: -172px;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(
+180deg
+ , #1c0522 ,transparent);
+    z-index: 10000000000000000000000;
+    }*/
+
+/*# sourceMappingURL=main.css.map */
+    </style>
+  </head>
+  <body>
+    <div class="carousel_ctnr" id="DESIGN">
+
+      <div class="carousel">
+        <figure>
+          <!--   -->
+          <div class="image">
+            <div class="flipbox">
+              <div class="front home_bg">
+                <!-- <div class="home_bg"></div> -->
+                <h1>home</h1>
+                <button class="front_btn"><span>click here</span></button>
+              </div>
+              <div class="back home_bg">
+                <!-- <div class="home_bg"></div> -->
+                
+                <button class="back_btn"><span>click here</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="image">
+            <div class="flipbox">
+              <div class="front about_bg">
+                <h1>about us</h1>
+                <button class="front_btn"><span>click here</span></button>
+              </div>
+              <div class="back about_bg">
+                <button class="back_btn"><span>click here</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="image">
+            <div class="flipbox">
+              <div class="front contact_bg">
+                <h1>contact us</h1>
+                <button class="front_btn contact_btn_txt_clr"><span>click here</span></button>
+              </div>
+              <div class="back contact_bg">
+                <button class="back_btn contact_btn_txt_clr"><span>click here</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="image">
+            <div class="flipbox">
+              <div class="front services_bg">
+                <h1>services</h1>
+                <button class="front_btn"><span>click here</span></button>
+              </div>
+              <div class="back services_bg">
+                <button class="back_btn"><span>click here</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="image">
+            <div class="flipbox">
+              <div class="front login_bg">
+                <h1>login/signup</h1>
+              <button class="front_btn login_btn_txt_clr"><span>click here</span></button>
+            </div>
+            <div class="back login_bg">
+              <button class="back_btn login_btn_txt_clr"><span>click here</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="image">
+          <div class="flipbox">
+            <div class="front feedback_bg">
+              <h1>feedback</h1>
+              <button class="front_btn"><span>click here</span></button>
+            </div>
+            <div class="back feedback_bg">
+              <button class="back_btn"><span>click here</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="image">
+          <div class="flipbox">
+            <div class="front portfolio_bg">
+              <h1>portfolio</h1>
+              <button class="front_btn"><span>click here</span></button>
+            </div>
+            <div class="back portfolio_bg">
+              <button class="back_btn"><span>click here</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="image">
+          <div class="flipbox">
+            <div class="front  error_bg">
+              <h1>404 error</h1>
+              <button class="front_btn"><span>click here</span></button>
+            </div>
+            <div class="back error_bg">
+              <button class="back_btn"><span>click here</span></button>
+            </div>
+          </div>
+        </div>
+        
+        
+        </figure>
+        <div class="main_nav">
+          <button class="nav prev " style="color: white;">Prev</button>
+          <button class="nav next " style="color: white;">Next</button>
+      </div>
+      </div>
+      
+    </div>
+      
+    <script>
+      var carousel = document.querySelector(".carousel"),
+        figure = carousel.querySelector("figure"),
+        nav = carousel.querySelector(".main_nav"),
+        numImages = figure.childElementCount,
+        theta = (2 * Math.PI) / numImages,
+        currImage = 0;
+      nav.addEventListener("click", onClick, true);
+
+      function onClick(e) {
+        e.stopPropagation();
+
+        var t = e.target;
+        if (t.tagName.toUpperCase() != "BUTTON") return;
+
+        if (t.classList.contains("next")) {
+          currImage++;
+        } else {
+          currImage--;
+        }
+
+        figure.style.transform = `rotateY(${currImage * -theta}rad)`;
+        
+      }
+    </script>
+  </body>
+</html>

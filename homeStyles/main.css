@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  .ctnr {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("../homePageImg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    flex-direction: column;
+  }
+  
+  .mainTextSlider {
+    width: 60rem;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .textSlider {
+    /* width:2400rem; */
+    width: 180rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 25rem;
+    -webkit-animation-name: slider;
+            animation-name: slider;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-duration: 24s;
+            animation-duration: 24s;
+    margin-left: -120rem;
+  }
+  
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 20;
+    letter-spacing: 0.1rem;
+  }
+  
+  .text {
+    width: 60rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  #text3 button {
+    margin-top: 5rem;
+  }
+  
+  @-webkit-keyframes slider {
+    0% {
+      margin-left: 0rem;
+    }
+    20% {
+      margin-left: 0rem;
+    }
+    25% {
+      margin-left: -60rem;
+    }
+    45% {
+      margin-left: -60rem;
+    }
+    50% {
+      margin-left: -120rem;
+    }
+    70% {
+      margin-left: -120rem;
+    }
+    75% {
+      margin-left: -60rem;
+    }
+    95% {
+      margin-left: -60rem;
+    }
+    100% {
+      margin-left: 0rem;
+    }
+  }
+  
+  @keyframes slider {
+    0% {
+      margin-left: 0rem;
+    }
+    20% {
+      margin-left: 0rem;
+    }
+    25% {
+      margin-left: -60rem;
+    }
+    45% {
+      margin-left: -60rem;
+    }
+    50% {
+      margin-left: -120rem;
+    }
+    70% {
+      margin-left: -120rem;
+    }
+    75% {
+      margin-left: -60rem;
+    }
+    95% {
+      margin-left: -60rem;
+    }
+    100% {
+      margin-left: 0rem;
+    }
+  }
+  .btn {
+    position: relative;
+    height: 4.5rem;
+    width: 15rem;
+    margin: 1rem 0.7rem;
+    padding: 0.5rem 0.5rem;
+    font-weight: 70;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    color: white;
+    border: 0.2rem solid white;
+    border-radius: 0.4rem;
+    text-transform: uppercase;
+    outline: 0;
+    overflow: hidden;
+    background: none;
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.08s ease-in;
+    -o-transition: 0.08s ease-in;
+    -ms-transition: 0.08s ease-in;
+    -moz-transition: 0.08s ease-in;
+    -webkit-transition: 0.08s ease-in;
+  }
+  
+  .btn:hover {
+    color: black;
+  }
+  
+  .btn:before {
+    content: "";
+    position: absolute;
+    background: white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    transition: top 0.09s ease-in;
+  }
+  
+  .btn:hover:before {
+    top: 0;
+  }
+  
+  @media screen and (max-width: 526px) {
+    html {
+      font-size: 55%;
+    }
+  }
+  @media screen and (max-width: 442px) {
+    html {
+      font-size: 45%;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    html {
+      font-size: 39%;
+    }
+  }
+  @media screen and (max-width: 288px) {
+    html {
+      font-size: 25%;
+    }
+  }/*# sourceMappingURL=main.css.map */

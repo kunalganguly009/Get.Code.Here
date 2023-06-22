@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"> -->
+
+    <!-- site is been boomarked -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <style>
+
+       *{
+           margin: 0;
+           padding: 0;
+
+       }
+       html{
+           font-size: 62.5%;
+       }
+       /* body{
+          overflow: hidden;
+       } */
+       .socialmedia{
+
+           /* background:linear-gradient(0deg , rgb(3, 220, 248 , 0.5) , rgb(173, 27, 100 , 0.8) ); */
+           /* background:linear-gradient(0deg ,rgb(3, 3, 3 , 1) , rgb(27, 27, 27 , 0.4) ); */
+            background: transparent;
+           height: 75vh;
+           margin-top: auto;
+           width: 100%;
+
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+       }
+       .socialmedia_icons{
+           /* is ko footer me dhal ne k liye margib top use kiya h and half screen me dhal ne  liye 50vh height use iya h */
+           /* margin-top: 100vh;       */
+           /* margin-bottom: 40rem; */
+           margin-top: 5rem;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-wrap: wrap;
+
+           /* background:black; */
+
+       }
+       .a{
+           height: 10.0rem;
+           width: 10.0rem;
+           border-radius: 1.5rem;
+           /* text-align: center; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+           /* margin: -2.0rem 2.0rem  2.0rem; */
+            margin: 1rem;
+            /* ******* choose any one ******** */
+           box-shadow: 2.0rem 2.0rem 5.0rem rgba(0, 0, 0, 0.5);
+           background: rgba(255 , 255 , 255 , 0.1);
+           border-top: 0.1rem solid rgba(255 , 255 , 255 , 0.5);
+            border-left: 0.1rem solid rgba(255 , 255 , 255 , 0.5);
+            backdrop-filter: blur(2rem);
+           transition: 0.5s;
+           
+
+           /* border:1rem solid rgba(255 , 255 , 255 , 0.4);
+           border-right: rgba(255 , 255 , 255 , 0.2);
+           border-bottom: rgba(255 , 255 , 255 , 0.2);
+           box-shadow: 0 5rem 45rem rgba(0 , 0 , 0 ,0.1);
+           transition: 0.3s all;
+            backdrop-filter: blur(2rem); */
+           
+           overflow: hidden;
+
+       }
+       .a i{
+           font-size: 3.0rem;
+           transition: 0.3s all linear;
+           
+       }
+
+       .a:hover i{
+           /* color: blue; */
+           transform: scale(1.4);
+           /* color: orange; */
+
+       }
+       .a:hover{
+           /* box-shadow:2rem 5rem 5rem 3rem orange ; */
+           transform: translateY(-2.0rem);
+       }
+
+       .a::before{
+           content: '';
+           position: absolute;
+           top: 0;
+           left: 0;
+           width:10.0rem ;
+           height: 10.0rem;
+           background: rgba(255 , 255 , 255 , 0.5);
+           transform: skewX(45deg) translateX(15.0rem);
+           transition: 0.5s;
+       }
+
+           .a:hover::before{
+           transform: skewX(45deg) translateX(-15.0rem);
+               
+           }
+
+       
+       /* .fa-facebook{
+           /* color: blue; */
+       /* } */
+        .fa-facebook-f{
+            color: white;
+            
+
+
+        }
+        .fa-instagram{
+            
+            color: white;
+            
+
+        }
+        .fa-twitter{
+            /* color: ; */
+            color: white;
+            
+        }
+        .fa-whatsapp{
+            /* color: ; */
+            color: white;
+            
+        }
+
+        h1{
+            color: black;
+            /* position: a; */
+            /* z-index: 5; */
+            text-align: center;
+            font-size: 5.0rem;
+            margin: 1.0rem;
+        }
+        /* @media screen and (max-width: 282px) {
+            .a{
+                margin: 1rem;
+            }
+            html{
+                font-size: 40%;
+            }
+
+            
+} */
+
+@media screen and (max-width: 526px) {
+        html {
+          font-size: 55%;
+        }
+      }
+      @media screen and (max-width: 442px) {
+        html {
+          font-size: 45%;
+        }
+      }
+      @media screen and (max-width: 360px) {
+        html {
+          font-size: 39%;
+        }
+      }
+      @media screen and (max-width: 288px) {
+        html {
+          font-size: 25%;
+        }
+      }
+        
+        </style>
+
+    <title>Document</title>
+    
+</head>
+<body>
+    <!-- <div class="heading">
+    </div> -->
+   
+    <div class="socialmedia" id="FOOTER">
+        <!-- <br> -->
+        <h1>Get in touch!</h1>
+        <div class="socialmedia_icons">
+       
+        <div class="a"><i class="fab fa-facebook-f"></i></div>
+        <div class="a"><i class="fab fa-instagram"></i></div>
+        <div class="a"><i class="fab fa-twitter"></i></div>
+        <div class="a"><i class="fab fa-whatsapp"></i></div>
+            <!-- if we wana increase height then we can use this syntax ... <a><i class="fab fa-2x fa-facebook"></i>  will get 2 times bigger-->
+    </div>
+
+    </div>
+</body>
+</html>

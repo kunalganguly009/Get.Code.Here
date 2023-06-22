@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    {{!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <style>
+         *{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+      }
+      body{
+        font-family: montserrat;
+      }
+      nav{
+        background-color: rgb(66, 65, 65);
+        position: fixed;
+        z-index: 1000000;
+        height: 50px;
+        width: 100%;
+      }
+      label.logo{
+        color: white;
+        font-size: 35px;
+        line-height: 50px;
+        padding: 0 100px;
+        font-weight: bold;
+      }
+      nav ul{
+        float: right;
+        margin-right: 20px;
+      }
+      nav ul li{
+        display: inline-block;
+        line-height: 50px;
+        margin: 0 5px;
+      }
+      nav ul li a{
+        color: white;
+        font-size: 17px;
+        padding: 7px 13px;
+        border-radius: 3px;
+        text-transform: uppercase;
+      }
+      .active,a{
+        
+        transition: 0.52s;
+      }
+      .active,a:hover{  
+        left: 0;
+        width: 1rem;
+        height: 3rem;
+        background: rgba(255, 255, 255, 0.5);
+        
+        transform: skewX(45deg) translateX(150px);
+      }
+      .checkbtn{
+        font-size: 30px;
+        color: white;
+        float: right;
+        line-height: 50px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+      }
+      #check{
+        display: none;
+      }
+      @media (max-width: 952px){
+        label.logo{
+          font-size: 30px;
+          padding-left: 50px;
+        }
+        nav ul li a{
+          font-size: 16px;
+        }
+      }
+      @media (max-width: 858px){
+        .checkbtn{
+          display: block;
+        }
+        ul{
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          /*background: rgb(66, 65, 65);*/
+          background: transparent;
+          top: 50px;
+          left: -100%;
+          text-align: center;
+          transition: all .5s;
+        }
+        nav ul li{
+          display: block;
+          margin: 50px 0;
+          line-height: 30px;
+        }
+        nav ul li a{
+          font-size: 20px;
+        }
+        a:hover,a.active{
+          background: none;
+          color: #0082e6;
+        }
+        #check:checked ~ ul{
+          background: black;
+          z-index: 1000001;
+          left: 0;
+        }
+      }
+      section{
+        background: url(bg1.jpg) no-repeat;
+        background-size: cover;
+        height: calc(100vh - 80px);
+      }
+      </style>
+
+</head>
+
+<body>
+  <nav class="navigation">
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      {{!-- <i class="fas fa-bars"></i> --}}
+      <i class="fa fa-bars" aria-hidden="true"></i>
+      </label>
+      <label class="logo">OnServ</label>
+      <ul>
+        <div id="myDIV">
+
+          <li><a href="#HOME" class="nav_btn active">Home</a></li>
+          <li><a href="#DESIGN" class="nav_btn">Designs</a></li>
+          <li><a href="#FOOTER" class="nav_btn">Join Us</a></li>
+          
+        </div>
+        </ul>
+    </nav>
+   <script>
+// Get the container element
+var btnContainer = document.getElementById("myDIV");
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("nav_btn");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+   </script>
+  </body>
+</html>
